@@ -3,7 +3,7 @@ import time
 
 pulse_1, pulse_2 = st.columns(2)
 
-numbers = st.empty()
+# numbers = st.empty()
 
 
 
@@ -17,12 +17,12 @@ for i in range(100):
         
     with pulse_1: 
         st.markdown("#### pulse 1")
-        # numbers = st.empty()
+        numbers = st.empty()
         with numbers.container():
             numbers.write(p1)
     with pulse_2:
         st.markdown("#### pulse 2")   
-        # numbers = st.empty()
+        numbers = st.empty()
         with numbers.container():
             numbers.write(p2)
      
