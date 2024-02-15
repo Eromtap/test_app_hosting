@@ -2,16 +2,17 @@ import streamlit as st
 import time
 
 
+numbers = st.empty()
 
 for i in range(100):
     conn = st.connection("postgresql", type="sql")
         
     df = conn.query('SELECT * FROM heart_rates;', ttl="0")
 
-    st.write(df)
-    st.empty()
-    # for row in df.itertuples():
-    #     st.write(f"{row.pulse1} has a :{row.pulse2}:")
+    with numbers.container():
+        st.write(df)
+
+
 
     time.sleep(2)
 
