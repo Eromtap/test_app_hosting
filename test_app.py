@@ -17,7 +17,7 @@ for i in range(100):
         
     with pulse_1:    
         with numbers.container():
-            st.write(p1)
+            st.write(p1, p2)
     with pulse_2:
         with numbers.container():
             st.write(p2)
