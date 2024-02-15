@@ -10,17 +10,15 @@ conn = st.connection("postgresql", type="sql")
 pulse_1 = ''
 pulse_2 = ''
 
-with st.empty(): 
+empt = st.empty()
+
+with empt: 
     st.markdown("pulse 1     pulse 2")
     while 1:
             df = conn.query('SELECT * FROM heart_rates;', ttl="1")
             for row in df.itertuples():
                 p1 = row.pulse1
                 p2 = row.pulse2
-            if p1 != pulse_1:
-                pulse_1 = p1
-            if p2 != pulse_2:
-                pulse_2 = p2
             st.write(pulse_1, pulse_2)
             time.sleep(2)
 
