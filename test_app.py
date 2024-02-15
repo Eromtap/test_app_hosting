@@ -35,7 +35,7 @@ with pulse_2:
                     for row in df.itertuples():
                         p2 = row.pulse2
                     st.write(p2)
-             time.sleep(1)
+            time.sleep(1)
 
 
     # time.sleep(2)
