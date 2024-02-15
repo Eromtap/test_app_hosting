@@ -20,11 +20,11 @@ for i in range(100):
         numbers = st.empty()
         with numbers.container():
             st.write(p1)
-    with pulse_2:
-        st.markdown("#### pulse ")   
-        numbers = st.empty()
-        with numbers.container():
-            st.write(p2)
+    # with pulse_2:
+    #     st.markdown("#### pulse 2")   
+    #     numbers = st.empty()
+    #     with numbers.container():
+    #         st.write(p2)
      
 
 
