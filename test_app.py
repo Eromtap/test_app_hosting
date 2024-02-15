@@ -13,7 +13,7 @@ pulse_2 = ''
 empt = st.empty()
 
 with empt: 
-    st.markdown("pulse 1     pulse 2")
+    st.markdown("####pulse 1     pulse 2")
     while 1:
             df = conn.query('SELECT * FROM heart_rates;', ttl="1")
             for row in df.itertuples():
