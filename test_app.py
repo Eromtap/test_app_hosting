@@ -19,7 +19,7 @@ with empt:
             for row in df.itertuples():
                 p1 = row.pulse1
                 p2 = row.pulse2
-            st.write(pulse_1, pulse_2)
+            st.write(p1, p2)
             time.sleep(2)
 
 
