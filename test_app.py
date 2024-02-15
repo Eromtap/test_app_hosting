@@ -22,7 +22,7 @@ with pulse_1:
         with numbers.container():
                 df = conn.query('SELECT * FROM heart_rates;', ttl="0")
                 for row in df.itertuples():
-                p1 = row.pulse1
+                    p1 = row.pulse1
                 st.write(p1)
         time.sleep(1)
 with pulse_2:
@@ -33,7 +33,7 @@ with pulse_2:
             with numbers.container():
                     df = conn.query('SELECT * FROM heart_rates;', ttl="0")
                     for row in df.itertuples():
-                    p2 = row.pulse2
+                        p2 = row.pulse2
                     st.write(p2)
              time.sleep(1)
 
