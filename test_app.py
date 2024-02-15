@@ -1,13 +1,15 @@
 import streamlit as st
 import time
 
-pulse_1, pulse_2 = st.columns(2)
+# pulse_1, pulse_2 = st.columns(2)
 
 # numbers = st.empty()
 
 conn = st.connection("postgresql", type="sql")
 
-    
+pulse_1 = ''
+pulse_2 = ''
+
 with st.empty(): 
     st.markdown("pulse 1     pulse 2")
     while 1:
@@ -15,7 +17,11 @@ with st.empty():
             for row in df.itertuples():
                 p1 = row.pulse1
                 p2 = row.pulse2
-            st.write(p1, p2)
+            if p1 != pulse_1:
+                pulse_1 = p1
+            if p2 != pulse_2:
+                pulse_2 = p2
+            st.write(pulse_1, pulse_2)
             time.sleep(2)
 
 
