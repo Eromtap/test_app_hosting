@@ -1,6 +1,6 @@
 import streamlit as st
 import psycopg2
-import psycopg2-binary
+
 
 CONNECT = psycopg2.connect(
     user = 'postgres',
