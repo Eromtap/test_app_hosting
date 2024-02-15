@@ -11,9 +11,9 @@ conn = st.connection("postgresql", type="sql")
 #numbers = st.empty()
 
 # df = conn.query('SELECT * FROM heart_rates;', ttl="0")
-for row in df.itertuples():
-    p1 = row.pulse1
-    p2 = row.pulse2
+# for row in df.itertuples():
+#     p1 = row.pulse1
+#     p2 = row.pulse2
     
 with pulse_1: 
     st.markdown("#### pulse 1")
