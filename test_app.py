@@ -14,10 +14,10 @@ for i in range(100):
 
     with pulse_1:    
         with numbers.container():
-            st.write(df)
+            st.write(df[0])
     with pulse_2:
         with numbers.container():
-            st.write(df)        
+            st.write(df[1])        
 
 
     time.sleep(2)
