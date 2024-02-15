@@ -15,7 +15,7 @@ conn = st.connection("postgresql", type="sql")
 #     p1 = row.pulse1
 #     p2 = row.pulse2
     
-with pulse_1, pulse2: 
+with pulse_1, pulse_2: 
     st.markdown("#### pulse 1")
     numbers = st.empty()
     while 1:
