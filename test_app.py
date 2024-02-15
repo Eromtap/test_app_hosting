@@ -16,7 +16,7 @@ with st.empty():
                 p1 = row.pulse1
                 p2 = row.pulse2
             st.write(p1, p2)
-        time.sleep(1)
+            time.sleep(1)
 
 
 
