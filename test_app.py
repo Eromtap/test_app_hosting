@@ -11,12 +11,12 @@ conn = st.connection("postgresql", type="sql")
 with st.empty(): 
     st.markdown("pulse 1     pulse 2")
     while 1:
-            df = conn.query('SELECT * FROM heart_rates;', ttl="0")
+            df = conn.query('SELECT * FROM heart_rates;', ttl="1")
             for row in df.itertuples():
                 p1 = row.pulse1
                 p2 = row.pulse2
             st.write(p1, p2)
-            time.sleep(1)
+            time.sleep(2)
 
 
 
