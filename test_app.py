@@ -17,10 +17,10 @@ for i in range(100):
         
     with pulse_1:    
         with numbers.container():
-            st.write(pulse1)
+            st.write(p1)
     with pulse_2:
         with numbers.container():
-            st.write(pulse2)
+            st.write(p2)
      
 
 
