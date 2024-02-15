@@ -11,5 +11,7 @@ for i in range(100):
     for row in df.itertuples():
         st.write(f"{row.pulse1} has a :{row.pulse2}:")
 
+    time.sleep(2)
+
 
 st.write("hello")
