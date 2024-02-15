@@ -3,12 +3,12 @@ import time
 
 pulse_1, pulse_2 = st.columns(2)
 
-numbers = st.empty()
+# numbers = st.empty()
 
 
 
 for i in range(100):
-
+    numbers = st.empty()
     conn = st.connection("postgresql", type="sql")
     df = conn.query('SELECT * FROM heart_rates;', ttl="0")
     for row in df.itertuples():
