@@ -17,10 +17,12 @@ for i in range(100):
         
     with pulse_1: 
         st.markdown("#### pulse 1")
+        numbers = st.empty()
         with numbers.container():
-            st.write(p2)
+            st.write(p1)
     with pulse_2:
-        st.markdown("#### pulse ")        
+        st.markdown("#### pulse ")   
+        numbers = st.empty()
         with numbers.container():
             st.write(p2)
      
