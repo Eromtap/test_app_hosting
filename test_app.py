@@ -56,6 +56,7 @@ async def right_col():
                 p2 = row.pulse2
                 if p2 != 'Connecting':
                     pulse_rate[time_count] = p2
+                    time_count += 1
             with numbers.container():
               st.markdown(f'<p class="medium-font">{p2}</p>', unsafe_allow_html=True)
               st.line_chart(pulse_rate)
