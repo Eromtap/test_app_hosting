@@ -20,7 +20,9 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-
+# simple password login. Password in plain text. Yeah, I know... But this is mainly just to keep
+# random people from accessing the app and hitting the database a ton. Not really for serious security
+# could add hashing and check against database for login but i don't wanna
 def login():
     with center:
         placeholder = st.empty()
@@ -33,8 +35,6 @@ def login():
                 return 0 
             else:
                 return 1
-
-
 
 
 async def left_col():
@@ -77,14 +77,5 @@ asyncio.run(main())
 
 
 
-# placeholder = st.empty()
 
-# with placeholder.form("login"):
-#     st.markdown("#### Painel de Login")
-#     email = st.text_input("Email", placeholder="Digite aqui seu email")
-#     senha = st.text_input("Senha", placeholder="Digite aqui sua senha", type="password")
-#     login_button = st.form_submit_button("Login")
-
-#     if login_button:
-#         placeholder.empty()
 
