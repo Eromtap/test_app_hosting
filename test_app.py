@@ -5,7 +5,7 @@ import time
 st.set_page_config(layout="wide")
 
 while 1:
-    pword = st.text_input()
+    pword = st.text_input('enter password)
     if pword == 'booger123':
         break
     else:
