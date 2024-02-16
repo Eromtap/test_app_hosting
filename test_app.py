@@ -61,7 +61,7 @@ async def right_col():
                     time_count += 1
             with numbers.container():
               st.markdown(f'<p class="medium-font">{p2}</p>', unsafe_allow_html=True)
-              st.line_chart(pulse_over_time)
+              st.line_chart(pulse_over_time, x="time", y="pulse")
               await asyncio.sleep(1)
                 
 
