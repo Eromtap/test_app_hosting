@@ -18,7 +18,7 @@ st.markdown("""
     }
 .medium-font {
     font-family: "Outfit", sans-serif;
-    font-weight: 200;
+    font-weight: 400;
     font-size:50px !important;
     color: green;
     }
