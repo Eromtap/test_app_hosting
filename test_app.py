@@ -5,7 +5,7 @@ import time
 st.set_page_config(layout="wide")
 
 def login():
-    pword = st.text_input('enter password')
+    pword = st.text_input('enter password', type="password")
     if pword == 'booger123':
         return 0
     else:
