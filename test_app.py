@@ -15,7 +15,7 @@ st.markdown("""
 
 conn = st.connection("postgresql", type="sql")
 
-left, center, right = st.columns([.3, .4, .3], gap='medium')
+left_maring, left, center, right, right_margin = st.columns([.1, .3, .2, .3, .1], gap='medium')
 
 async def left_col():
     with left:
