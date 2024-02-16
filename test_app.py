@@ -4,7 +4,7 @@ import time
 
 
 
-# conn = st.connection("postgresql", type="sql")
+conn = st.connection("postgresql", type="sql")
 
 # pulse_1 = ''
 # pulse_2 = ''
@@ -12,10 +12,11 @@ import time
 # empt = st.empty()
 
 
-st.markdown("#### Numbers overwriting each other")
+st.markdown("#### Pulse Rate")
 numbers = st.empty()
 
 for i in range(0,10):
+    df = conn.query('SELECT * FROM heart_rates;', ttl="0")
     with numbers.container():
       st.write(i)
       time.sleep(1)
@@ -44,6 +45,12 @@ for i in range(0,10):
 
 
 
+# st.markdown("#### Numbers overwriting each other")
+# numbers = st.empty()
 
+# for i in range(0,10):
+#     with numbers.container():
+#       st.write(i)
+#       time.sleep(1)
 
 
