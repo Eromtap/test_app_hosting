@@ -12,12 +12,10 @@ st.markdown("""
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap')
 
 .big-font {
-    font-family: "Anton", sans-serif;
     font-size:70px !important;
     color: yellow;
     }
 .medium-font {
-    font-family: "Anton", sans-serif;
     font-size:50px !important;
     color: green;
     }
