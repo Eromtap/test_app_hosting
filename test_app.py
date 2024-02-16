@@ -28,10 +28,8 @@ async def left_col():
             df = conn.query('SELECT * FROM heart_rates;', ttl="0")
             for row in df.itertuples():
                 p1 = row.pulse1
-                # p2 = row.pulse2
             with numbers.container():
-              st.write(p1)
-              # st.write(p2)
+              st.write('<p> class="big-font">{p1}</p>', unsafe_allow=True)
               await asyncio.sleep(1)
 
 async def right_col():
