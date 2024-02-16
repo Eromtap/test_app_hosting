@@ -4,12 +4,12 @@ import time
 
 
 
-conn = st.connection("postgresql", type="sql")
+# conn = st.connection("postgresql", type="sql")
 
-pulse_1 = ''
-pulse_2 = ''
+# pulse_1 = ''
+# pulse_2 = ''
 
-empt = st.empty()
+# empt = st.empty()
 
 
 st.markdown("#### Numbers overwriting each other")
