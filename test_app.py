@@ -13,10 +13,10 @@ empt = st.empty()
 
 with empt: 
     while 1:
-            df = conn.query('SELECT * FROM heart_rates;', ttl="0")
-            for row in df.itertuples():
-                p1 = row.pulse1
-                p2 = row.pulse2
+        df = conn.query('SELECT * FROM heart_rates;', ttl="0")
+        for row in df.itertuples():
+            p1 = row.pulse1
+            p2 = row.pulse2
         with pulse1:
             st.write(p1)
 
