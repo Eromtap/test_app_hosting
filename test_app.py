@@ -4,12 +4,13 @@ import time
 
 st.set_page_config(layout="wide")
 
-while 1:
-    pword = st.text_input('enter password')
-    if pword == 'booger123':
-        break
-    else:
-        continue
+def login():
+    while 1:
+        pword = st.text_input('enter password')
+        if pword == 'booger123':
+            return 0
+        else:
+            continue
 
 
 st.markdown("""
@@ -61,6 +62,7 @@ async def right_col():
 
 
 async def main():
+    login()
     await asyncio.gather(right_col(), left_col())
     
 
@@ -68,30 +70,6 @@ async def main():
 asyncio.run(main())
 
 
-# while 1:
-#     df = conn.query('SELECT * FROM heart_rates;', ttl="0")
-#     for row in df.itertuples():
-#         p1 = row.pulse1
-#         p2 = row.pulse2
-#     with pulse1:
-#         pulse1.empty()
-#         st.write(p1)
 
-#     with pulse2:
-#         st.empty()
-#         st.write(p2)
-    
-#     time.sleep(2)
-
-
-
-
-# st.markdown("#### Numbers overwriting each other")
-# numbers = st.empty()
-
-# for i in range(0,10):
-#     with numbers.container():
-#       st.write(i)
-#       time.sleep(1)
 
 
