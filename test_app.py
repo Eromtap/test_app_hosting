@@ -25,7 +25,18 @@ with left:
           time.sleep(1)
 
 
-
+with right:
+    st.markdown("#### Pulse Rate 2:")
+    numbers = st.empty()
+    
+    
+    for i in range(0,10):
+        df = conn.query('SELECT * FROM heart_rates;', ttl="0")
+        for row in df.itertuples():
+            p2 = row.pulse2
+        with numbers.container():
+          st.write(p2)
+          time.sleep(1)
 
 
 
