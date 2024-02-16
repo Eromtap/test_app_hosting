@@ -1,6 +1,7 @@
 import streamlit as st
 import asyncio
 import time
+import pandas as pd
 
 
 st.set_page_config(layout="wide")
