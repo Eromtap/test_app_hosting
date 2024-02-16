@@ -47,17 +47,19 @@ async def right_col():
         st.markdown('<p class="big-font">Pulse Rate 2:</p>', unsafe_allow_html=True)
         numbers = st.empty()
 
-        num_list = []
+        pulse_rate = []
+        time_count = 0
         
         while 1:
             df = conn.query('SELECT * FROM heart_rates;', ttl="0")
             for row in df.itertuples():
                 p2 = row.pulse2
                 if p2 != 'Connecting':
-                    num_list.append(p2)
+                    pulse_rate.append(p2)
+                    time_count += 1
             with numbers.container():
               st.markdown(f'<p class="medium-font">{p2}</p>', unsafe_allow_html=True)
-              st.line_chart(num_list)
+              st.line_chart(num_list, time_count)
               await asyncio.sleep(1)
 
 
