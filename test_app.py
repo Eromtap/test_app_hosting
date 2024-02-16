@@ -17,6 +17,7 @@ st.markdown("""
     color: yellow;
     }
 .medium-font {
+    font-family: "Anton", sans-serif;
     font-size:50px !important;
     color: green;
     }
