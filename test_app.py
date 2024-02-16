@@ -29,7 +29,7 @@ async def left_col():
             for row in df.itertuples():
                 p1 = row.pulse1
             with numbers.container():
-              st.write('<p> class="big-font">{p1}</p>', unsafe_allow=True)
+              st.markdown('<p> class="big-font">{p1}</p>', unsafe_allow=True)
               await asyncio.sleep(1)
 
 async def right_col():
