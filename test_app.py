@@ -22,7 +22,7 @@ st.markdown("""
 
 
 def login():
-    with left_margin:
+    with center:
         placeholder = st.empty()
 
         with placeholder.form("Login",clear_on_submit=True):
