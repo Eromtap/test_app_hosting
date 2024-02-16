@@ -4,12 +4,22 @@ import time
 
 st.set_page_config(layout="wide")
 
+# def login():
+#     pword = st.text_input('enter password', type="password")
+#     if pword == 'booger123':
+#         return 0
+#     else:
+#         return 1
+
+
 def login():
-    pword = st.text_input('enter password', type="password")
-    if pword == 'booger123':
-        return 0
-    else:
-        return 1
+    with st.form("Login",clear_on_submit=True):
+        pword = st.text_input("Entre Password: ")
+        submitted = st.form_submit_button("Submit")
+        if submitted:
+            return 0 
+
+
 
 
 st.markdown("""
@@ -70,5 +80,9 @@ asyncio.run(main())
 
 
 
-
+# with st.form("Question",clear_on_submit=True):
+#     user_question = st.text_input("Ask a question:")
+#     submitted = st.form_submit_button("Submit")
+#     if submitted:
+#         handle_userinput(user_question)
 
