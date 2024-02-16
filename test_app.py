@@ -34,14 +34,22 @@ async def left_col():
     with left:
         st.markdown('<p class="big-font">Pulse Rate 1:</p>', unsafe_allow_html=True)
         numbers = st.empty()
-        
+
+        pulse_over_time = pd.DataFrame(columns=["pulse", "time"])
+        time_count = 0
         
         while 1:
             df = conn.query('SELECT * FROM heart_rates;', ttl="0")
             for row in df.itertuples():
                 p1 = row.pulse1
-            with numbers.container():
+                if p2 != 'Connecting':
+                    new_record = pd.DataFrame([{"pulse": int(p1), "time": time_count}])
+                    pulse_over_time = pd.concat([pulse_over_time, new_record], ignore_index=True)
+                    time_count += 1
+                    
+            with numbers.container():                
               st.markdown(f'<p class="medium-font">{p1}</p>', unsafe_allow_html=True)
+              st.line_chart(pulse_over_time, x="time", y="pulse")
               await asyncio.sleep(1)
 
 async def right_col():
@@ -51,6 +59,7 @@ async def right_col():
 
         pulse_over_time = pd.DataFrame(columns=["pulse", "time"])
         time_count = 0
+        
         while 1:
             df = conn.query('SELECT * FROM heart_rates;', ttl="0")
             for row in df.itertuples():
