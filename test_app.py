@@ -33,7 +33,7 @@ async def left_col():
             for row in df.itertuples():
                 p1 = row.pulse1
             with numbers.container():
-              st.markdown(f'<p class="medium-font">{p2}</p>', unsafe_allow_html=True)
+              st.markdown(f'<p class="medium-font">{p1}</p>', unsafe_allow_html=True)
               await asyncio.sleep(1)
 
 async def right_col():
@@ -47,7 +47,7 @@ async def right_col():
             for row in df.itertuples():
                 p2 = row.pulse2
             with numbers.container():
-              st.markdown(f'<p class="medium-font">{p1}</p>', unsafe_allow_html=True)
+              st.markdown(f'<p class="medium-font">{p2}</p>', unsafe_allow_html=True)
               await asyncio.sleep(1)
 
 
