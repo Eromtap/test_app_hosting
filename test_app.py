@@ -13,10 +13,13 @@ st.set_page_config(layout="wide")
 
 
 def login():
-    with st.form("Login",clear_on_submit=True):
+    placeholder = st.empty()
+    
+    with placeholder.form("Login",clear_on_submit=True):
         pword = st.text_input("Entre Password: ")
         submitted = st.form_submit_button("Submit")
         if submitted and pword == 'booger123':
+            placeholder.empty()
             return 0 
         else:
             return 1
@@ -82,9 +85,14 @@ asyncio.run(main())
 
 
 
-# with st.form("Question",clear_on_submit=True):
-#     user_question = st.text_input("Ask a question:")
-#     submitted = st.form_submit_button("Submit")
-#     if submitted:
-#         handle_userinput(user_question)
+# placeholder = st.empty()
+
+# with placeholder.form("login"):
+#     st.markdown("#### Painel de Login")
+#     email = st.text_input("Email", placeholder="Digite aqui seu email")
+#     senha = st.text_input("Senha", placeholder="Digite aqui sua senha", type="password")
+#     login_button = st.form_submit_button("Login")
+
+#     if login_button:
+#         placeholder.empty()
 
