@@ -2,7 +2,13 @@ import streamlit as st
 import asyncio
 import time
 
-
+st.markdown("""
+<style>
+.big-font {
+    font-size:100px !important;
+}
+</style>
+""", unsafe_allow_html=True)
 
 
 conn = st.connection("postgresql", type="sql")
