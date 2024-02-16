@@ -5,7 +5,7 @@ import time
 
 st.set_page_config(layout="wide")
 conn = st.connection("postgresql", type="sql")
-
+left_margin, left, center, right, right_margin = st.columns([.1, .3, .2, .3, .1], gap='medium')
 
 st.markdown("""
 <style>
@@ -37,7 +37,7 @@ def login():
 
 
 
-left_maring, left, center, right, right_margin = st.columns([.1, .3, .2, .3, .1], gap='medium')
+# left_margin, left, center, right, right_margin = st.columns([.1, .3, .2, .3, .1], gap='medium')
 
 async def left_col():
     with left:
