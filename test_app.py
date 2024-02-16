@@ -42,7 +42,7 @@ async def left_col():
             df = conn.query('SELECT * FROM heart_rates;', ttl="0")
             for row in df.itertuples():
                 p1 = row.pulse1
-                if p2 != 'Connecting':
+                if p1 != 'Connecting':
                     new_record = pd.DataFrame([{"pulse": int(p1), "time": time_count}])
                     pulse_over_time = pd.concat([pulse_over_time, new_record], ignore_index=True)
                     time_count += 1
