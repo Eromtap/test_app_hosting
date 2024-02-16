@@ -23,15 +23,15 @@ st.markdown("""
 
 def login():
     placeholder = st.empty()
-
-    with placeholder.form("Login",clear_on_submit=True):
-        pword = st.text_input("Entre Password: ")
-        submitted = st.form_submit_button("Submit")
-        if submitted and pword == 'booger123':
-            placeholder.empty()
-            return 0 
-        else:
-            return 1
+    with left_margin:
+        with placeholder.form("Login",clear_on_submit=True):
+            pword = st.text_input("Entre Password: ")
+            submitted = st.form_submit_button("Submit")
+            if submitted and pword == 'booger123':
+                placeholder.empty()
+                return 0 
+            else:
+                return 1
 
 
 
