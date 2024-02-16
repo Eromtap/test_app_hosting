@@ -23,7 +23,7 @@ with empt:
         with pulse2:
             st.write(p2)
         
-    time.sleep(2)
+        time.sleep(2)
 
 
 
