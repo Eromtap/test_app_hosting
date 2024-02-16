@@ -14,7 +14,7 @@ st.markdown("""
     color: yellow;
     }
 .medium-font {
-    font-size:30px !important;
+    font-size:50px !important;
     color: green;
     }
 </style>
