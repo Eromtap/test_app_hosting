@@ -26,7 +26,7 @@ left_margin, left, center, right, right_margin = st.columns([.1, .3, .2, .3, .1]
 # """, unsafe_allow_html=True)
 
 
-with open( "app\style.css" ) as css:
+with open( "style.css" ) as css:
     st.markdown( f'<style>{css.read()}</style>' , unsafe_allow_html= True)
 
 # simple password login. Password in plain text. Yeah, I know... But this is mainly just to keep
