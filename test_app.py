@@ -4,6 +4,14 @@ import time
 
 st.set_page_config(layout="wide")
 
+while 1:
+    pword = st.input('enter password')
+    if pword == 'booger123':
+        break
+    else:
+        continue
+
+
 st.markdown("""
 <style>
 .big-font {
