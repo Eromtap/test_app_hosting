@@ -59,6 +59,7 @@ async def right_col():
                     new_record = pd.DataFrame([{"pulse": p2, "time": time_count}])
                     pulse_over_time = pd.concat([pulse_over_time, new_record], ignore_index=True)
                     time_count += 1
+                    st.write(time_count)
             with numbers.container():
               st.markdown(f'<p class="medium-font">{p2}</p>', unsafe_allow_html=True)
               st.line_chart(pulse_over_time, x="time", y="pulse")
