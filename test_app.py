@@ -20,7 +20,7 @@ for i in range(0,10):
     for row in df.itertuples():
         p1 = row.pulse1
     with numbers.container():
-      st.write(i)
+      st.write(p1)
       time.sleep(1)
 
 
