@@ -1,11 +1,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Outfit:wght@100..900&display=swap');
 
-.big-font {
+.big-font {    
+    font-family: "Gibson", sans-serif;
     font-size:70px !important;
     font-weight: 800;
     }
 .medium-font {
+    font-family: "Gibson", sans-serif;
     font-weight: 400;
     font-size:50px !important;
     color: green;
