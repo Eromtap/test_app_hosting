@@ -23,7 +23,7 @@ async def left_col():
             with numbers.container():
               st.write(p1)
               # st.write(p2)
-              time.sleep(1)
+              await asyncio.sleep(1)
 
 async def right_col():
     with right:
@@ -37,7 +37,7 @@ async def right_col():
                 p2 = row.pulse2
             with numbers.container():
               st.write(p2)
-              time.sleep(1)
+              await asyncio.sleep(1)
 
 
 
