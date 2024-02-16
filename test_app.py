@@ -10,7 +10,7 @@ left_margin, left, center, right, right_margin = st.columns([.1, .3, .2, .3, .1]
 st.markdown("""
 <style>
 .big-font {
-    font-size:50px !important;
+    font-size:70px !important;
     color: yellow;
     }
 .medium-font {
