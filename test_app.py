@@ -16,8 +16,10 @@ def login():
     with st.form("Login",clear_on_submit=True):
         pword = st.text_input("Entre Password: ")
         submitted = st.form_submit_button("Submit")
-        if submitted:
+        if submitted and pword == 'booger123':
             return 0 
+        else:
+            return 1
 
 
 
