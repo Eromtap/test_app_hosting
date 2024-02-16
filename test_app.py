@@ -5,7 +5,7 @@ import time
 st.markdown("""
 <style>
 .big-font {
-    font-size:100px !important;
+    font-size:50px !important;
 }
 </style>
 """, unsafe_allow_html=True)
@@ -33,7 +33,7 @@ async def left_col():
 
 async def right_col():
     with right:
-        st.markdown("#### Pulse Rate 2:")
+        st.markdown('<p class="big-font">Pulse Rate 2:</p>', unsafe_allow_html=True)
         numbers = st.empty()
         
         
