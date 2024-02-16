@@ -18,7 +18,7 @@ while 1:
         p1 = row.pulse1
         p2 = row.pulse2
     with pulse1:
-        st.empty()
+        pulse1.empty()
         st.write(p1)
 
     with pulse2:
