@@ -46,6 +46,8 @@ async def main():
     
 
 
+asyncio.run(main())
+
 
 # while 1:
 #     df = conn.query('SELECT * FROM heart_rates;', ttl="0")
