@@ -9,6 +9,10 @@ st.markdown("""
 .big-font {
     font-size:50px !important;
     color: yellow;
+.medium-font {
+    font-size:30px !important;
+    color: green;
+    }
 }
 </style>
 """, unsafe_allow_html=True)
@@ -29,7 +33,7 @@ async def left_col():
             for row in df.itertuples():
                 p1 = row.pulse1
             with numbers.container():
-              st.markdown(f'<p class="big-font">{p1}</p>', unsafe_allow_html=True)
+              st.markdown(f'<p class="medium-font">{p1}</p>', unsafe_allow_html=True)
               #st.write(p1)
               await asyncio.sleep(1)
 
