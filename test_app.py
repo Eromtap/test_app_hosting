@@ -2,24 +2,9 @@ import streamlit as st
 import asyncio
 import time
 
-#st.set_page_config(layout="wide")
 
-
-
-
-def login():
-    placeholder = st.empty()
-    
-    with placeholder.form("Login",clear_on_submit=True):
-        pword = st.text_input("Entre Password: ")
-        submitted = st.form_submit_button("Submit")
-        if submitted and pword == 'booger123':
-            placeholder.empty()
-            return 0 
-        else:
-            return 1
-
-
+st.set_page_config(layout="wide")
+conn = st.connection("postgresql", type="sql")
 
 
 st.markdown("""
@@ -36,7 +21,21 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
-conn = st.connection("postgresql", type="sql")
+def login():
+    placeholder = st.empty()
+
+    with placeholder.form("Login",clear_on_submit=True):
+        pword = st.text_input("Entre Password: ")
+        submitted = st.form_submit_button("Submit")
+        if submitted and pword == 'booger123':
+            placeholder.empty()
+            return 0 
+        else:
+            return 1
+
+
+
+
 
 left_maring, left, center, right, right_margin = st.columns([.1, .3, .2, .3, .1], gap='medium')
 
@@ -72,7 +71,6 @@ async def right_col():
 
 async def main():
     if login() == 0:
-        st.set_page_config(layout="wide")
         await asyncio.gather(right_col(), left_col())
     
 
