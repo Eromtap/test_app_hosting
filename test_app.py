@@ -18,6 +18,7 @@ st.markdown("""
     }
 .medium-font {
     font-family: "Anton", sans-serif;
+    font-weight: 200;
     font-size:50px !important;
     color: green;
     }
