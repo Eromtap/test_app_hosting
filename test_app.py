@@ -42,7 +42,7 @@ async def right_col():
 
 
 async def main():
-    await asyncio.gather(left_col(), right_col())
+    await asyncio.gather(right_col(), left_col())
     
 
 
