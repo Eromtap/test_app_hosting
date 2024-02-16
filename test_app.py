@@ -12,7 +12,7 @@ conn = st.connection("postgresql", type="sql")
 # empt = st.empty()
 
 
-st.markdown("#### Pulse Rate")
+st.markdown("#### Pulse Rate 1:")
 numbers = st.empty()
 
 for i in range(0,10):
@@ -21,6 +21,7 @@ for i in range(0,10):
         p1 = row.pulse1
     with numbers.container():
       st.write(p1)
+      st.write(p2)
       time.sleep(1)
 
 
