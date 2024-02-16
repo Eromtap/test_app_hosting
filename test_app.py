@@ -9,7 +9,7 @@ left_margin, left, center, right, right_margin = st.columns([.1, .3, .2, .3, .1]
 
 st.markdown("""
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Outfit:wght@100..900&display=swap')
 </style>
 <style>
 .big-font {
@@ -17,7 +17,7 @@ st.markdown("""
     color: yellow;
     }
 .medium-font {
-    font-family: "Anton", sans-serif;
+    font-family: "Outfit", sans-serif;
     font-weight: 200;
     font-size:50px !important;
     color: green;
