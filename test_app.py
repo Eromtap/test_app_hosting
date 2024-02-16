@@ -7,24 +7,6 @@ st.set_page_config(layout="wide")
 conn = st.connection("postgresql", type="sql")
 left_margin, left, center, right, right_margin = st.columns([.1, .3, .2, .3, .1], gap='medium')
 
-# st.markdown("""
-# <style>
-# @import url('https://fonts.googleapis.com/css2?family=Anton&family=Outfit:wght@100..900&display=swap')
-# </style>
-# <style>
-# .big-font {
-#     font-size:70px !important;
-#     color: yellow;
-#     }
-# .medium-font {
-#     font-family: "Outfit", sans-serif;
-#     font-weight: 400;
-#     font-size:50px !important;
-#     color: green;
-#     }
-# </style>
-# """, unsafe_allow_html=True)
-
 
 with open( "style.css" ) as css:
     st.markdown( f'<style>{css.read()}</style>' , unsafe_allow_html= True)
