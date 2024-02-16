@@ -17,7 +17,7 @@ left, right = st.columns(2)
 
 async def left_col():
     with left:
-        st.markdown("#### Pulse Rate 1:")
+        st.markdown('<p class="big-font">Pulse Rate 1:</p>', unsafe_allow_html=True)
         numbers = st.empty()
         
         
