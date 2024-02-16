@@ -62,8 +62,8 @@ async def right_col():
 
 
 async def main():
-    login()
-    await asyncio.gather(right_col(), left_col())
+    if login() == 0:
+        await asyncio.gather(right_col(), left_col())
     
 
 
