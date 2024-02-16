@@ -9,11 +9,11 @@ st.markdown("""
 .big-font {
     font-size:50px !important;
     color: yellow;
+    }
 .medium-font {
     font-size:30px !important;
     color: green;
     }
-}
 </style>
 """, unsafe_allow_html=True)
 
