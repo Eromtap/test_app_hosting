@@ -59,7 +59,7 @@ async def right_col():
                 if p2 != 'Connecting':
                     new_record = [p2,time_count]
                     time_count += 1
-                    pd.concat([pulse_over_time, new_record], ignore_index=True)
+                    pulse_over_time = pd.concat([pulse_over_time, new_record], ignore_index=True)
             with numbers.container():
               st.markdown(f'<p class="medium-font">{p2}</p>', unsafe_allow_html=True)
               st.line_chart(pulse_over_time)
