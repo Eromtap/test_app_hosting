@@ -3,6 +3,8 @@
 
 .big-font {
     font-size:70px !important;
+    font-family: "Gibson", sans-serif;
+    font-weight: 500;
     }
 .medium-font {
     font-family: "Gibson", sans-serif;
