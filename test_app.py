@@ -17,6 +17,8 @@ numbers = st.empty()
 
 for i in range(0,10):
     df = conn.query('SELECT * FROM heart_rates;', ttl="0")
+    for row in df.itertuples():
+        p1 = row.pulse1
     with numbers.container():
       st.write(i)
       time.sleep(1)
