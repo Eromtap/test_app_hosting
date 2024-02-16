@@ -14,7 +14,6 @@ st.markdown("""
     color: yellow;
     }
 .medium-font {
-    @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap')
     font-size:50px !important;
     color: green;
     }
