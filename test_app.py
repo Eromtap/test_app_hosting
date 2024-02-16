@@ -5,12 +5,11 @@ import time
 st.set_page_config(layout="wide")
 
 def login():
-    while 1:
-        pword = st.text_input('enter password')
-        if pword == 'booger123':
-            return 0
-        else:
-            continue
+    pword = st.text_input('enter password')
+    if pword == 'booger123':
+        return 0
+    else:
+        return 1
 
 
 st.markdown("""
