@@ -9,7 +9,6 @@ left_margin, left, center, right, right_margin = st.columns([.1, .3, .2, .3, .1]
 
 st.markdown("""
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap')
 .big-font {
     font-size:70px !important;
     color: yellow;
