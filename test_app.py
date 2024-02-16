@@ -8,6 +8,7 @@ st.markdown("""
 <style>
 .big-font {
     font-size:50px !important;
+    color: yellow;
 }
 </style>
 """, unsafe_allow_html=True)
