@@ -22,8 +22,9 @@ st.markdown("""
 
 
 def login():
-    placeholder = st.empty()
     with left_margin:
+        placeholder = st.empty()
+
         with placeholder.form("Login",clear_on_submit=True):
             pword = st.text_input("Entre Password: ")
             submitted = st.form_submit_button("Submit")
@@ -35,9 +36,6 @@ def login():
 
 
 
-
-
-# left_margin, left, center, right, right_margin = st.columns([.1, .3, .2, .3, .1], gap='medium')
 
 async def left_col():
     with left:
