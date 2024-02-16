@@ -18,6 +18,7 @@ numbers = st.empty()
 for i in range(0,10):
     with numbers.container():
       st.write(i)
+      time.sleep(1)
 
 
 
