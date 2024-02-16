@@ -26,7 +26,7 @@ def login():
         placeholder = st.empty()
 
         with placeholder.form("Login",clear_on_submit=True):
-            pword = st.text_input("Entre Password: ")
+            pword = st.text_input("Entre Password: ", type="password")
             submitted = st.form_submit_button("Submit")
             if submitted and pword == 'booger123':
                 placeholder.empty()
