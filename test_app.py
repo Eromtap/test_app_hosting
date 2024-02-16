@@ -15,7 +15,7 @@ async def left_col():
         numbers = st.empty()
         
         
-        for i in range(0,10):
+        while 1:
             df = conn.query('SELECT * FROM heart_rates;', ttl="0")
             for row in df.itertuples():
                 p1 = row.pulse1
@@ -31,7 +31,7 @@ async def right_col():
         numbers = st.empty()
         
         
-        for i in range(0,10):
+        while 1:
             df = conn.query('SELECT * FROM heart_rates;', ttl="0")
             for row in df.itertuples():
                 p2 = row.pulse2
