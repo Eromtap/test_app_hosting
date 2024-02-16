@@ -2,14 +2,9 @@ import streamlit as st
 import asyncio
 import time
 
-st.set_page_config(layout="wide")
+#st.set_page_config(layout="wide")
 
-# def login():
-#     pword = st.text_input('enter password', type="password")
-#     if pword == 'booger123':
-#         return 0
-#     else:
-#         return 1
+
 
 
 def login():
@@ -77,6 +72,7 @@ async def right_col():
 
 async def main():
     if login() == 0:
+        st.set_page_config(layout="wide")
         await asyncio.gather(right_col(), left_col())
     
 
