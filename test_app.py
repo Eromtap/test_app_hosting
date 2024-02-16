@@ -47,8 +47,7 @@ async def right_col():
         st.markdown('<p class="big-font">Pulse Rate 2:</p>', unsafe_allow_html=True)
         numbers = st.empty()
 
-        pulse_rate = {}
-        time_count = 0
+        pulse_over_time = pd.DataFrame(np.random.randn(20, 3), columns=["col1", "col2", "col3"])
         
         while 1:
             df = conn.query('SELECT * FROM heart_rates;', ttl="0")
@@ -59,7 +58,7 @@ async def right_col():
                     time_count += 1
             with numbers.container():
               st.markdown(f'<p class="medium-font">{p2}</p>', unsafe_allow_html=True)
-              st.line_chart(pulse_rate)
+              st.line_chart(pulse_over_time)
               await asyncio.sleep(1)
 
 
