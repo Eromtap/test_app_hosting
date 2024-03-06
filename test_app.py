@@ -53,7 +53,7 @@ async def left_col():
 
                 fig = px.line(pulse_over_time, x='time', y='pulse', 
                             labels={'pulse': 'Pulse', 'time': 'Time'})
-                fig.update_yaxes(range=[0, 200])
+                fig.update_yaxes(range=[40, 180])
                 st.plotly_chart(fig, use_container_width=True)
 
                 await asyncio.sleep(1)
@@ -79,7 +79,7 @@ async def right_col():
                 st.markdown(f'<p class="medium-font">{p2}</p>', unsafe_allow_html=True)
                 fig = px.line(pulse_over_time, x='time', y='pulse', 
                             labels={'pulse': 'Pulse', 'time': 'Time'})
-                fig.update_yaxes(range=[0, 200])
+                fig.update_yaxes(range=[40, 180])
                 st.plotly_chart(fig, use_container_width=True)
                 await asyncio.sleep(1)
                 
