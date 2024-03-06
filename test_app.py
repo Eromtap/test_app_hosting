@@ -76,6 +76,7 @@ async def right_col():
                     time_count += 1
                     
             with numbers.container():
+                st.markdown(f'<p class="medium-font">{p1}</p>', unsafe_allow_html=True)
                 fig = px.line(pulse_over_time, x='time', y='pulse', 
                             labels={'pulse': 'Pulse', 'time': 'Time'})
                 fig.update_yaxes(range=[0, 200])
