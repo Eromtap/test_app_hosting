@@ -80,7 +80,7 @@ async def right_col():
                             labels={'pulse': 'Pulse', 'time': 'Time'})
                 fig.update_yaxes(range=[0, 200])
                 st.plotly_chart(fig, use_container_width=True)
-              await asyncio.sleep(1)
+                await asyncio.sleep(1)
                 
 
 async def main():
