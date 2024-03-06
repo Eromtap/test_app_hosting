@@ -3,7 +3,7 @@ import asyncio
 import time
 import pandas as pd
 import numpy as np
-from vega_lite.altair import Chart
+from altair.vega_lite import Chart
 
 
 st.set_page_config(layout="wide")
