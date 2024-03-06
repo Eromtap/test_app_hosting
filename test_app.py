@@ -48,7 +48,7 @@ async def left_col():
                     time_count += 1
                     
             with numbers.container():                
-              st.markdown(f'<p class="medium-font">{p1}</p>', unsafe_allow_html=True)
+                st.markdown(f'<p class="medium-font">{p1}</p>', unsafe_allow_html=True)
 
 
                 chart = Chart(pulse_over_time).mark_line().encode(
