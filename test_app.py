@@ -3,7 +3,7 @@ import asyncio
 import time
 import pandas as pd
 import numpy as np
-import plotly
+import plotly.express
 
 
 st.set_page_config(layout="wide")
@@ -52,13 +52,9 @@ async def left_col():
                 st.markdown(f'<p class="medium-font">{p1}</p>', unsafe_allow_html=True)
 
 
-                chart = Chart(pulse_over_time).mark_line().encode(
-                    x='time',
-                    y='pulse',
-                ).configure_axis(
-                    y=dict(scale=dict(domain=(0, 200))))  # Set y-axis limits
                 
-                st.altair_chart(chart)
+                fig = px.line(pulse_over_time, x="time", y="pulse")
+                fig.show()
     
     
     
