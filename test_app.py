@@ -49,7 +49,20 @@ async def left_col():
                     
             with numbers.container():                
               st.markdown(f'<p class="medium-font">{p1}</p>', unsafe_allow_html=True)
-              st.line_chart(pulse_over_time, x="time", y="pulse", ylim=(0, 200))
+
+
+            chart = Chart(pulse_over_time).mark_line().encode(
+                x='time',
+                y='pulse',
+            ).configure_axis(
+                y=dict(scale=dict(domain=(0, 200))))  # Set y-axis limits
+            
+            st.altair_chart(chart)
+
+
+
+                
+              #st.line_chart(pulse_over_time, x="time", y="pulse", ylim=(0, 200))
               await asyncio.sleep(1)
 
 async def right_col():
