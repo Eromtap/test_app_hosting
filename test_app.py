@@ -51,27 +51,11 @@ async def left_col():
             with numbers.container():                
                 st.markdown(f'<p class="medium-font">{p1}</p>', unsafe_allow_html=True)
 
-
-                
-                # fig = px.line(pulse_over_time, x="time", y="pulse")
-                # fig.update_y
-                # fig.show()
-    
-                st.plotly_chart(px.line(pulse_over_time, x='time', y='pulse', 
-                            labels={'pulse': 'Pulse', 'time': 'Time'}),
-                            use_container_width=True)
-
-
                 fig = px.line(pulse_over_time, x='time', y='pulse', 
                             labels={'pulse': 'Pulse', 'time': 'Time'})
                 fig.update_yaxes(range=[0, 200])
                 st.plotly_chart(fig, use_container_width=True)
 
-
-
-                
-                    
-                  #st.line_chart(pulse_over_time, x="time", y="pulse", ylim=(0, 200))
                 await asyncio.sleep(1)
 
 async def right_col():
