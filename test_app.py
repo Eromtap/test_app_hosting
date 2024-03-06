@@ -58,8 +58,8 @@ async def left_col():
                 # fig.show()
     
                 st.plotly_chart(px.line(pulse_over_time, x='time', y='pulse', 
-                            labels={'pulse': 'Pulse', 'time': 'Time'},
-                            use_container_width=True))
+                            labels={'pulse': 'Pulse', 'time': 'Time'}),
+                            use_container_width=True)
     
                     
                   #st.line_chart(pulse_over_time, x="time", y="pulse", ylim=(0, 200))
