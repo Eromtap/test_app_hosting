@@ -3,7 +3,7 @@ import asyncio
 import time
 import pandas as pd
 import numpy as np
-from altair.vegalite.v4 import Chart
+import plotly
 
 
 st.set_page_config(layout="wide")
