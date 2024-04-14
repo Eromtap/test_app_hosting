@@ -47,7 +47,7 @@ async def left_col():
                     new_record = pd.DataFrame([{"pulse": int(p1), "time": time_count}])
                     pulse_over_time = pd.concat([pulse_over_time, new_record], ignore_index=True)
                     time_count += 1
-                    if len(pulse_over_time) > 10:
+                    if len(pulse_over_time) > 60:
                         pulse_over_time.drop(index=pulse_over_time.index[0], axis=0, inplace=True)
                         
             with numbers.container():                
@@ -57,7 +57,6 @@ async def left_col():
                             labels={'pulse': 'Pulse', 'time': 'Time'})
                 fig.update_yaxes(range=[40, 180])
                 st.plotly_chart(fig, use_container_width=True)
-                #st.write(pulse_over_time)
                 await asyncio.sleep(1)
 
 async def right_col():
@@ -76,6 +75,8 @@ async def right_col():
                     new_record = pd.DataFrame([{"pulse": int(p2), "time": time_count}])
                     pulse_over_time = pd.concat([pulse_over_time, new_record], ignore_index=True)
                     time_count += 1
+                    if len(pulse_over_time) > 60:
+                        pulse_over_time.drop(index=pulse_over_time.index[0], axis=0, inplace=True)                    
                     
             with numbers.container():
                 st.markdown(f'<p class="medium-font">{p2}</p>', unsafe_allow_html=True)
