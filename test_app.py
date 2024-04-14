@@ -48,7 +48,7 @@ async def left_col():
                     pulse_over_time = pd.concat([pulse_over_time, new_record], ignore_index=True)
                     time_count += 1
                     if len(df) > 10:
-                        df.drop(index=df.index[0], axis=0, inplace=True)
+                        pulse_over_time.drop(index=df.index[0], axis=0, inplace=True)
                     
             with numbers.container():                
                 st.markdown(f'<p class="medium-font">{p1}</p>', unsafe_allow_html=True)
