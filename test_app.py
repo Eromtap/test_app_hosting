@@ -50,9 +50,7 @@ async def left_col():
                     time_count += 1
                     if len(pulse_over_time) > 60:
                         pulse_over_time.drop(index=pulse_over_time.index[0], axis=0, inplace=True)
-                # else:
-                #     pulse_over_time = pd.DataFrame(columns=["pulse", "time"])
-                #     time_count = 0
+
                 
             with numbers.container():                
                 st.markdown(f'<p class="medium-font">{p1}</p>', unsafe_allow_html=True)
@@ -63,10 +61,7 @@ async def left_col():
                 st.plotly_chart(fig, use_container_width=True)
                 await asyncio.sleep(1)
 
-                # if st.button('Clear', key=button_key):
-                #         pulse_over_time = pd.DataFrame(columns=["pulse", "time"])
-                #         time_count = 0
-                # button_key += 1
+
 
 async def right_col():
     with right:
@@ -87,9 +82,7 @@ async def right_col():
                     time_count += 1
                     if len(pulse_over_time) > 60:
                         pulse_over_time.drop(index=pulse_over_time.index[0], axis=0, inplace=True)   
-                # else:
-                #     pulse_over_time = pd.DataFrame(columns=["pulse", "time"])
-                #     time_count = 0
+
                     
             with numbers.container():
                 st.markdown(f'<p class="medium-font">{p2}</p>', unsafe_allow_html=True)
@@ -108,7 +101,7 @@ async def main():
     # if login() == 0:
     await asyncio.gather(right_col(), left_col())
 
-    st.button("Clear")
+
 
 
 asyncio.run(main())
