@@ -47,7 +47,7 @@ async def left_col():
                     new_record = pd.DataFrame([{"pulse": int(p1), "time": time_count}])
                     pulse_over_time = pd.concat([pulse_over_time, new_record], ignore_index=True)
                     time_count += 1
-                    if len(df) > 10:
+                    if len(pulse_over_time) > 10:
                         pulse_over_time.drop(index=pulse_over_time.index[0], axis=0, inplace=True)
                     
             with numbers.container():                
