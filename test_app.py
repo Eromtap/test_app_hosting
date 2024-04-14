@@ -38,7 +38,8 @@ async def left_col():
 
         pulse_over_time = pd.DataFrame(columns=["pulse", "time"])
         time_count = 0
-        
+
+        button_key = 0
         while 1:
             df = conn.query('SELECT * FROM heart_rates;', ttl="0")
             for row in df.itertuples():
@@ -62,9 +63,10 @@ async def left_col():
                 st.plotly_chart(fig, use_container_width=True)
                 await asyncio.sleep(1)
 
-    if st.button('Clear', key='pulse1'):
-            pulse_over_time = pd.DataFrame(columns=["pulse", "time"])
-            time_count = 0
+            if st.button('Clear', key=button_key):
+                    pulse_over_time = pd.DataFrame(columns=["pulse", "time"])
+                    time_count = 0
+            button_key += 1
 
 async def right_col():
     with right:
