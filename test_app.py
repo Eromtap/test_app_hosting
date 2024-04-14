@@ -78,7 +78,8 @@ async def right_col():
                     pulse_over_time = pd.concat([pulse_over_time, new_record], ignore_index=True)
                     time_count += 1
                     if len(pulse_over_time) > 60:
-                        pulse_over_time.drop(index=pulse_over_time.index[0], axis=0, inplace=True)                    
+                        pulse_over_time.drop(index=pulse_over_time.index[0], axis=0, inplace=True)   
+                        time_count = 0
                     
             with numbers.container():
                 st.markdown(f'<p class="medium-font">{p2}</p>', unsafe_allow_html=True)
