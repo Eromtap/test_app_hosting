@@ -49,7 +49,7 @@ async def left_col():
                     time_count += 1
                     if len(pulse_over_time) > 10:
                         pulse_over_time.drop(index=pulse_over_time.index[0], axis=0, inplace=True)
-                    
+                        st.write(pulse_over_time.index[0]
             with numbers.container():                
                 st.markdown(f'<p class="medium-font">{p1}</p>', unsafe_allow_html=True)
 
