@@ -75,7 +75,8 @@ async def right_col():
 
         pulse_over_time = pd.DataFrame(columns=["pulse", "time"])
         time_count = 0
-        
+
+        button_key = 0
         while 1:
             df = conn.query('SELECT * FROM heart_rates;', ttl="0")
             for row in df.itertuples():
@@ -86,9 +87,9 @@ async def right_col():
                     time_count += 1
                     if len(pulse_over_time) > 60:
                         pulse_over_time.drop(index=pulse_over_time.index[0], axis=0, inplace=True)   
-                else:
-                    pulse_over_time = pd.DataFrame(columns=["pulse", "time"])
-                    time_count = 0
+                # else:
+                #     pulse_over_time = pd.DataFrame(columns=["pulse", "time"])
+                #     time_count = 0
                     
             with numbers.container():
                 st.markdown(f'<p class="medium-font">{p2}</p>', unsafe_allow_html=True)
@@ -97,7 +98,11 @@ async def right_col():
                 fig.update_yaxes(range=[40, 180])
                 st.plotly_chart(fig, use_container_width=True)
                 await asyncio.sleep(1)
-                
+
+                if st.button('Clear', key=button_key):
+                        pulse_over_time = pd.DataFrame(columns=["pulse", "time"])
+                        time_count = 0
+                button_key += 1
 
 async def main():
     # if login() == 0:
