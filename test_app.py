@@ -17,18 +17,18 @@ with open( "style.css" ) as css:
 # simple password login. Password in plain text. Yeah, I know... But this is mainly just to keep
 # random people from accessing the app and hitting the database a ton. Not really for serious security
 # could add hashing and check against database for login but i don't wanna
-def login():
-    with center:
-        placeholder = st.empty()
+# def login():
+#     with center:
+#         placeholder = st.empty()
 
-        with placeholder.form("Login",clear_on_submit=True):
-            pword = st.text_input("Entre Password: ", type="password")
-            submitted = st.form_submit_button("Submit")
-            if submitted and pword == 'booger123':
-                placeholder.empty()
-                return 0 
-            else:
-                return 1
+#         with placeholder.form("Login",clear_on_submit=True):
+#             pword = st.text_input("Entre Password: ", type="password")
+#             submitted = st.form_submit_button("Submit")
+#             if submitted and pword == 'booger123':
+#                 placeholder.empty()
+#                 return 0 
+#             else:
+#                 return 1
 
 
 async def left_col():
@@ -100,8 +100,8 @@ async def right_col():
                 
 
 async def main():
-    if login() == 0:
-        await asyncio.gather(right_col(), left_col())
+    # if login() == 0:
+    await asyncio.gather(right_col(), left_col())
     
 
 
