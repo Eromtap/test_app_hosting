@@ -52,7 +52,7 @@ async def left_col():
                 # else:
                 #     pulse_over_time = pd.DataFrame(columns=["pulse", "time"])
                 #     time_count = 0
-            if st.button('Clear'):
+            if st.button('Clear', key='pulse1'):
                     pulse_over_time = pd.DataFrame(columns=["pulse", "time"])
                     time_count = 0                
             with numbers.container():                
