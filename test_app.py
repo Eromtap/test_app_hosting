@@ -99,10 +99,10 @@ async def right_col():
                 st.plotly_chart(fig, use_container_width=True)
                 await asyncio.sleep(1)
 
-                if st.button('Clear', key=button_key):
-                        pulse_over_time = pd.DataFrame(columns=["pulse", "time"])
-                        time_count = 0
-                button_key += 1
+                # if st.button('Clear', key=button_key):
+                #         pulse_over_time = pd.DataFrame(columns=["pulse", "time"])
+                #         time_count = 0
+                # button_key += 1
 
 async def main():
     # if login() == 0:
