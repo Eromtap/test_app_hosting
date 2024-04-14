@@ -51,6 +51,7 @@ async def left_col():
                         pulse_over_time.drop(index=pulse_over_time.index[0], axis=0, inplace=True)
                 else:
                     pulse_over_time = pd.DataFrame(columns=["pulse", "time"])
+                    time_count = 0
             with numbers.container():                
                 st.markdown(f'<p class="medium-font">{p1}</p>', unsafe_allow_html=True)
 
