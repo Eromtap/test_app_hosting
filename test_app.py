@@ -57,7 +57,7 @@ async def left_col():
                             labels={'pulse': 'Pulse', 'time': 'Time'})
                 fig.update_yaxes(range=[40, 180])
                 st.plotly_chart(fig, use_container_width=True)
-                st.write(pulse_over_time)
+                #st.write(pulse_over_time)
                 await asyncio.sleep(1)
 
 async def right_col():
